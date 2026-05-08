@@ -13,9 +13,9 @@ test('після трьох наведень показує форму бажа�
 
   const button = screen.getByRole('button', { name: 'так' });
 
-  await userEvent.hover(button);
-  await userEvent.hover(button);
-  await userEvent.hover(button);
+  for (let i = 0; i < 3; i += 1) {
+    await userEvent.hover(button);
+  }
 
   expect(screen.getByRole('textbox', { name: "Ім'я" })).toBeInTheDocument();
   expect(screen.getByRole('textbox', { name: 'Посилання' })).toBeInTheDocument();

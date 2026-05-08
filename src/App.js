@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import './App.css';
 
+const MAX_HOVER_COUNT = 3;
+
 function App() {
   const [hoverCount, setHoverCount] = useState(0);
   const [buttonPosition, setButtonPosition] = useState({ top: '55%', left: '50%' });
 
   const handleButtonHover = () => {
-    if (hoverCount >= 3) {
+    if (hoverCount >= MAX_HOVER_COUNT) {
       return;
     }
 
@@ -21,7 +23,7 @@ function App() {
     <div className="app">
       <h1>Конструктор вішлиста</h1>
 
-      {hoverCount < 3 ? (
+      {hoverCount < MAX_HOVER_COUNT ? (
         <div className="question-area">
           <p className="question-text">Хочеш подарунок?</p>
           <button
