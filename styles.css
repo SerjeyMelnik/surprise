@@ -1,0 +1,13 @@
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background-image: url("https://i.pinimg.com/originals/ee/42/d9/ee42d91ece376e6847f6941b72269c76.gif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
